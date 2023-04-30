@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./CheckToken.js"></script>
+    <script src="./UserView.js"></script>
+    <title>UserView</title>
+</head>
+
+<body onload="GetUserData()">
+    <div class="flex mt-32 ">
+        <div class="flex flex-col gap-4 mx-auto border rounded p-10">
+            <p class="text-center">User Data</p>
+            <div class="mx-auto">
+                  <div class="rounded-full border  overflow-hidden">
+                         <img src=""  id="UserIMG"  alt="">
+                  </div>
+            </div>
+            <div class="flex  gap-10">
+                
+                <div class="flex flex-col gap-4 flex-grow">
+                     <p class="text-center">Name</p>
+                     <p class="text-center">Email</p>
+                </div>
+                <div class="flex flex-col gap-4 flex-grow">
+                    <p class="text-center" id="UserName">Name</p>
+                    <p class="text-center" id="UserEmail">Email</p>
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

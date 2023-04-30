@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./EmailVerification.js"></script>
+    <title>Verify</title>
+</head>
+<body onload="OnLoad()">
+    <div class="flex mt-32 ">
+        <div class="flex flex-col gap-4 mx-auto border rounded p-10">
+            <p class="text-center">Email Verification</p>
+            <div class="flex flex-col">
+                <input type="text" name="otp" id="otp" placeholder="OTP" class="border p-2 rounded mx-auto">
+                <p class="text-sm">OTP has been sent on your registered email</p>
+            </div>
+            <div class="">
+                <button onclick="VerifyOTP()" class="w-full p-2 bg-blue-500  rounded text-white  hover:bg-blue-400  transition-all focus:bg-blue-600 mx-auto">Verify</button>
+                <p class="text-sm text-right hidden" id="resendtimer" >Resend In <span id="Timer"></span></p>
+                <p class="text-sm text-right hidden" id="resendbutton">Click <span class="text-blue-500 cursor-pointer">here</span> to resent OTP</p>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

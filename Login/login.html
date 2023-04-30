@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./login.js"></script>
+
+</head>
+
+<body>
+   
+    <div class="flex mt-32 ">
+        <div class="flex gap-4 mx-auto  rounded p-2">
+            <div class="mx-auto border-r p-4 " id="Login">
+                <p class="text-2xl text-center">Sign in</p>
+                <div class="mt-4 flex flex-col w-80 gap-5">
+                    <input type="email" id="UserEmail" placeholder="Email" class="border p-2  w-80  rounded mx-auto ">
+                    <input type="password" id="UserPassword" placeholder="Password" class="border p-2  w-80  rounded mx-auto">
+                </div>
+                <div class="py-3 border-b">
+                    <button onclick="SimpleLogin()"
+                        class="w-full p-2 bg-blue-500  rounded text-white  hover:bg-blue-400  transition-all focus:bg-blue-600 mx-auto">Sign in</button>
+                </div>
+                <p class="text-center">Sign Up <span class="text-blue-400 cursor-pointer" onclick="ToggleLoginSignup('register')">here</span></p>
+            </div> 
+            <div class="mx-auto border-r p-4 hidden" id="Register">
+                <p class="text-2xl text-center">Sign up</p>
+                <div class="mt-4 flex flex-col w-80 gap-5">
+                    <input type="text" id="RegUserName" placeholder="Full Name" class="border p-2  w-80  rounded mx-auto">
+                    <input type="email" id="RegUserEmail" placeholder="Email" class="border p-2  w-80  rounded mx-auto ">
+                    <input type="password" id="RegUserPassword" placeholder="Password" class="border p-2  w-80  rounded mx-auto">
+                </div>
+                <div class="py-3 border-b">
+                    <button onclick="SignUp()"
+                        class="w-full p-2 bg-blue-500  rounded text-white  hover:bg-blue-400  transition-all focus:bg-blue-600 mx-auto">Sign Up</button>
+                </div>
+                <p class="text-center">Sign In <span class="text-blue-400 cursor-pointer" onclick="ToggleLoginSignup('login')">here</span></p>
+            </div>
+            <div class="my-auto">
+               <p class="text-center">Continue with</p>
+                <div class="mt-4 flex flex-col gap-5 ">
+                    <div class="mx-auto">
+                        <div id="g_id_onload"
+                            data-client_id="204442434137-vrefc270h4sclqoflosmloe1p0g25j9o.apps.googleusercontent.com"
+                            data-context="signin" data-ux_mode="popup" data-callback="onSignInwithGoogle"
+                            data-auto_prompt="false">
+                        </div>
+                        <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="filled_blue"
+                            data-text="signin_with" data-size="large" data-logo_alignment="left">
+                        </div>
+                    </div>
+                    <div class="mx-auto">
+                        <div>
+
+                            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"
+                                class="fb-login-button" data-width="" data-size="large" data-button-type=""
+                                data-layout="" data-auto-logout-link="false" data-use-continue-as="true">
+                            </fb:login-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
